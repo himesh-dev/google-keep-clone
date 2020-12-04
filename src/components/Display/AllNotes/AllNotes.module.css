@@ -1,0 +1,87 @@
+.allNotesContainer {
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: row;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+.allNotesContainer > p {
+  color: var(--text-grey);
+  font-size: 0.9rem;
+  width: 100%;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.noteCard {
+  padding: 1rem;
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  justify-content: space-between;
+  width: 15rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.noteCardTexts {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 10;
+  overflow: hidden;
+}
+
+.noteTitle {
+  word-break: break-word;
+  margin-bottom: 1rem;
+}
+.noteDescription {
+  word-break: break-word;
+}
+.noteCardActionContainer {
+  height: 2.2rem;
+}
+.noteCardAction {
+  margin-top: 1rem;
+  display: none;
+  justify-content: space-between;
+}
+.noteCard:hover {
+  box-shadow: var(--box-shadow);
+}
+.noteCard:hover > .noteCardActionContainer > .noteCardAction {
+  display: flex;
+}
+.noDataContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.4;
+}
+.noDataIcon {
+  height: 8rem;
+  width: 8rem;
+}
+.noDataIcon:hover {
+  background-color: transparent;
+  opacity: 0.54;
+}
+.noDataContainer > p {
+  color: var(--text-grey);
+  width: fit-content;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+@media only screen and (max-width: 600px) {
+  .noteCard {
+    width: 100%;
+    margin: 0 1rem 1rem 1rem;
+  }
+}

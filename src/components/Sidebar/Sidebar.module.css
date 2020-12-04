@@ -1,0 +1,50 @@
+.sidebarContainer {
+  background-color: var(--background);
+  width: 80px;
+  height: calc(100% - 4rem);
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.5rem;
+  overflow: hidden;
+  z-index: 1;
+}
+.sidebarOpen {
+  width: 280px;
+  transition-duration: 150ms;
+  -webkit-transition-property: width, box-shadow, border-radius;
+  transition-property: width, box-shadow, border-radius;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sidebarOpen > .active {
+  background-color: var(--menu-active);
+  width: 280px;
+  transition: all 0.3 ease-in-out;
+}
+
+.sidebarItem {
+  border-radius: 0 25px 25px 0;
+  padding-left: 0.75rem;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  min-width: 280px;
+  cursor: pointer;
+}
+.activeIcon,
+.activeIcon:hover {
+  background-color: var(--menu-active);
+  opacity: 1;
+}
+.sidebarItemLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-left: 1.25rem;
+}
+@media only screen and (max-width: 600px) {
+  .sidebarOpen {
+    box-shadow: var(--box-shadow);
+  }
+}

@@ -1,0 +1,21 @@
+.appDisplay {
+  margin-left: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sidebarOpen {
+  margin-left: 280px;
+  transition-duration: 150ms;
+  -webkit-transition-property: margin-left, box-shadow, border-radius;
+  transition-property: margin-left, box-shadow, border-radius;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media only screen and (max-width: 600px) {
+  .sidebarOpen {
+    margin-left: 80px;
+  }
+}
