@@ -49,6 +49,7 @@ function CreateBox() {
     let updatedNotes = { ...notes, id: uuidv4(), pinned: false, archive: true };
     onCloseHandler({ note: updatedNotes });
   };
+  //comment
   return (
     <CreateBoxComponent
       expand={expand}
